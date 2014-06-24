@@ -1,0 +1,53 @@
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{display:block}
+mark, rp, rt, ruby, summary, time{display:inline }
+.wrapper {width:100%;overflow:hidden}
+/* Global properties ======================================================== */
+
+
+
+#logo{display:block;background:url(../images/logo.png) 0 0 no-repeat;width:288px;height:94px;text-indent:-9999px}
+/* ============================= header ====================== */
+header{padding-top:34px;height:148px}
+h4{font-size:20px;color:#fff;font-weight:400;}
+#icons{background:url(../images/line_hor1.png) 23px 0 no-repeat;padding-top:1px}
+#icons li{background:url(../images/line_hor1.png) 23px bottom no-repeat;line-height:29px}
+#icons a{color:#696969;text-decoration:none;font-style:normal;display:inline-block}
+#icons img{float:left;margin-right:9px;margin-top:5px}
+#icons a:hover{color:#fff}
+
+#menu { margin-left:440px; padding-top:0px}
+#menu li {float:left;padding-left:51px}
+#menu li a{display:block;font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#bbb;text-transform:uppercase;text-decoration:none;text-align:center;letter-spacing:-1px;height:px;font-style:normal;font-weight:700}
+#menu li a span{font-size:13px;color:#666666;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
+#menu li a:hover, #menu .active a{color:#497e04}
+#menu li a:hover span, #menu .active a span{color:#fff}
+
+.font{
+text-align:left;
+font-size:20px;color:#fff;
+}
+
+
+.set{
+margin-left:-600px; 
+}
+
+html, body, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#headline {
+	padding-top:0px;
+}
+
+#photo {
+	margin-left:100px;
+	width: 34px;
+}
+body {
+	background: url(images/back.jpg);
+	text-align: center;
+}

@@ -1,0 +1,134 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Only One Voice</title>
+	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+	<script type="text/javascript">
+			var image1=new Image()
+			image1.src="img1.jpg"
+			
+			var image2=new Image()
+			image2.src="img2.jpg"
+			
+			var image3=new Image()
+			image3.src="img3.jpg"
+			
+			var image4=new Image()
+			image4.src="img4.jpg"
+			
+			var image5=new Image()
+			image5.src="img5.jpg"
+			
+			var image6=new Image()
+			image6.src="img6.jpg"
+			
+			var image7=new Image()
+			image7.src="img7.jpg"
+			
+			var image8=new Image()
+			image8.src="img8.jpg"
+			
+			var image9=new Image()
+			image9.src="img9.jpg"
+			
+			function validateForm()
+			{
+				var x=document.forms["newsletter"]["email"].value;
+				var atpos=x.indexOf("@");
+				var dotpos=x.lastIndexOf(".");
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+				{
+					alert("Not a valid e-mail address");
+					return false;
+				}
+				alert("Thanks for Subscribing to our Newsletter. A email has been sent with your subscription details. Hope you enjoy reading to our Newletters ");
+			}
+	</script>
+</head>
+<body>
+    <header>
+		<table id="menu" width="650px">
+		<tr><td align="center" width="20%"><div class="active"><a href="index.html">Home <br /> Welcome!</a></div>
+			<div><a href="index.html"><img src="images/menu_icon1.gif"  alt=""></a></div></td>
+		<td align="center" width="20%"><div><a href="donate.html">Support <br /> us</a></div>
+			<div><a href="donate.html"><img src="images/menu_icon2.gif"  alt=""></a></div></td>
+		<td  align="center" width="20%"><div><a href="blog.html">Our<br /> Blog</a></div>
+			<div><a href="blog.html"><img src="images/menu_icon3.gif"  alt=""></a></div></td>
+		<td align="center" width="20%"><div><a href="knowus.html">Know <br /> Us</a></div>
+			<div><a href="knowus.html"><img src="images/menu_icon4.gif"  alt=""></a></div></td>
+		<td align="center" width="20%"><div><a href="contact.html">Contact <br /> Us</a></div>
+			<div><a href="contact.html"><img src="images/menu_icon5.gif"  alt=""></a></div></td>
+		 </tr>
+		</table>
+    </header>
+    <table class="maintable">
+<tr><td>
+    <table>
+		<tr><td colspan="3" align="center">
+			<div id="headline">
+				<img src="img1.jpg" id="border" width="850px" height="500px" name="slide"/>
+			</div>
+			<script>
+                var step=1
+                function slideit(){
+                if (!document.images)
+                return
+                document.images.slide.src=eval("image"+step+".src")
+                if (step<9)
+                step++
+                else
+                step=1
+                setTimeout("slideit()",1500)
+                }
+                slideit()
+            </script>
+		</td></tr>
+		<tr><td width="33%">
+        <ul id="icons">
+			<h4>Address</h4>
+            <li><span class="font">Country: USA </span></li>
+            <li><span class="font">City: Tempe AZ </span></li>
+            <li><span class="font">Phone: 480-965-1515 </span></li>
+            <li><span class="font">Email: <a href="mailto:">yourvoice@oov.org</a></span></li>
+		</ul>
+        </td><td width="33%">
+        <ul id="icons">
+        <h4>Follow Us</h4>
+            <li><a href="http://www.facebook.com/" target="_blank"><img src="images/icon1.jpg" alt="">Facebook</a></li>
+            <li><a href="https://accounts.google.com/ServiceLogin?service=oz&continue=https://plus.google.com/?gpsrc%3Dogpy0%26tab%3DwX%26gpcaz%3D25a6249&hl=en" target="_blank"><img src="images/icon2.jpg" alt="">Google +</a></li>
+            <li><a href="http://www.linkedin.com/" target="_blank"><img src="images/icon3.jpg" alt="">LinkedIn</a></li>
+            <li><a href="http://twitter.com/" target="_blank"><img src="images/icon4.jpg" alt="">Twitter </a></li>
+        </ul></td><td width="33%">
+        <h4 class="sidetitles">Newsletter</h4>
+        Our newsletter,<a style="text-decoration:underline"> The Voice Within</a>, highlights the Division's monthly news, cases, and events. We usually the newsletter by the end of the month.
+		<form name="newsletter" method="post" onsubmit="return validateForm();">
+			            <input  name="email" class="input" type="text" value="Type Your Email Here" onblur="if(this.value=='') this.value='Type Your Email Here'" onFocus="if(this.value =='Type Your Email Here') this.value=''" />
+			<input type="submit"  onclick="show_alert()" value="Subscribe" class="input" />	
+		</form>
+		</td>
+	</table>
+	</td><td>
+	<table id="righttable">
+        <tr><td>
+            <img src="images/rss_logo.png" width="50px" height="50px">RSS FEED<br/>
+        <iframe  src="news_win.htm" width="300" height="400" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" style="padding-bottom:70px" ></iframe>
+        </td></tr>
+        <tr><td>
+        Check out our <a href="blog.html">BLOG</a> and <a href="knowus.html">Get to know us</a><br/><br/>
+        </td></tr>
+        <tr><td>
+        Be part of our family. Be the voice of these beautiful creations which can't speak for themselves and need YOU to speak for them. You could help us by <br/> <a href="contact.html" target="_blank">Volunteering</a> or by <a href="donate.html" target="_blank">Making a donation</a>.
+        </td></tr>
+	</table>
+
+</td></tr>
+</table>
+    <footer>
+    <div style="padding-100" >
+    <p id="foot">Copyright &copy; &amp; Trademark of rdanturi</p>
+    </div>
+    </footer>	
+</body>
+</html>

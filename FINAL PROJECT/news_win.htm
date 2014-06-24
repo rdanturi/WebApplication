@@ -1,0 +1,94 @@
+<html><head>
+
+<title>News</title>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+</head>
+
+<body class="fee"  TEXT="white" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current" OnLoad="NewsScrollStart();">
+
+<div id="NewsDiv">
+<table class="feed" cellpadding="5" cellspacing="0" border="0" width="100%"><tr><td>
+<span class="feedtitle">
+Brazilâ€™s Forests Threatened<br>Wednesday, April 25, 2012 10:00 PM <br/>
+</span>
+Changes to Brazil’s forest law threaten the Amazon and other key regions by removing critical environmental protections. 
+<br><br><br>
+<span class="feedtitle">
+Yanni and WWF Partner to Save Wild Pandas<br>
+</span>
+Global music artist to promote awareness of giant panda conservation<a id="read_link" href="http://www.worldwildlife.org/who/media/press/2012/WWFPresitem27632.html">Read more</a>
+<br><br>
+<span class="feedtitle">
+Need some Animal Laughter?<br>
+</span>
+Check out our supporters and their funny pet stories on <a href="http://nickhetcher.com/pets/?page_id=56">Pet Flix</a>
+<br><br>
+<span class="feedtitle">
+Missing the Sabertooth<br>
+</span>
+Saber tooth tigers lived many, many years ago back when the earth was trapped in an Ice Age.  At that time, woolly mammoths and mastodons roamed the icy land.  Smilodons, which were a type of saber tooth tiger, were a tiny bit smaller than the panthers that live today.<a href="http://www.ucmp.berkeley.edu/mammal/carnivora/sabretooth.html"> Read more</a>
+<br>
+<br>
+
+</td></tr></table>
+</div>
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+
+var scrollspeed		= "1"		
+var speedjump		= "30"		
+var startdelay 		= "2" 		
+var nextdelay		= "0" 		
+var topspace		= "2px"
+var frameheight		= "200px"	
+
+
+
+current = (scrollspeed)
+
+
+function HeightData(){
+AreaHeight=dataobj.offsetHeight
+if (AreaHeight==0){
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+else {
+ScrollNewsDiv()
+}}
+
+function NewsScrollStart(){
+dataobj=document.all? document.all.NewsDiv : document.getElementById("NewsDiv")
+dataobj.style.top=topspace
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+
+function ScrollNewsDiv(){
+dataobj.style.top=parseInt(dataobj.style.top)-(scrollspeed)
+if (parseInt(dataobj.style.top)<AreaHeight*(-1)) {
+dataobj.style.top=frameheight
+setTimeout("ScrollNewsDiv()",( nextdelay * 1000 ))
+}
+else {
+setTimeout("ScrollNewsDiv()",speedjump)
+}}
+
+
+
+-->
+</script>
+
+
+</body>
+</html>

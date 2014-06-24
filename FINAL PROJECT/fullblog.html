@@ -1,0 +1,72 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Only One Voice</title>
+	<link rel="stylesheet" href="stylen.css" type="text/css" charset="utf-8" />
+	<script type="text/javascript">
+<!--
+var image1=new Image()
+image1.src="img1.jpg"
+var image2=new Image()
+image2.src="img2.jpg"
+var image3=new Image()
+image3.src="img3.jpg"
+//-->
+</script>
+
+<script>
+function loadXMLDoc(fname)
+{
+var xmlDoc;
+// code for IE
+if (window.ActiveXObject)
+{ xmlDoc = new ActiveXObject("Microsoft.XMLDOM"); }
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation.createDocument)
+{ xmlDoc = document.implementation.createDocument("", "", null); }
+else
+{ alert('Your browser cannot handle this script'); }
+xmlDoc.async=false;
+xmlDoc.load(fname);
+return(xmlDoc);
+}
+function displayResult()
+{
+xml=loadXMLDoc("blogData.xml");
+xsl=loadXMLDoc("blogData.xsl");
+// code for IE
+if (window.ActiveXObject)
+{
+ex = xml.transformNode(xsl);
+document.getElementById("example").innerHTML = ex;
+}
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation.createDocument)
+{
+xsltProcessor = new XSLTProcessor();
+xsltProcessor.importStylesheet(xsl);
+resultDocument = xsltProcessor.transformToFragment(xml,document);
+document.getElementById("example").appendChild(resultDocument);
+}
+}
+</script>
+
+</head>
+
+<body onLoad="displayResult()">
+<div id="example">
+
+</div>
+
+
+		
+						
+
+
+				
+	
+</body>
+</html>
